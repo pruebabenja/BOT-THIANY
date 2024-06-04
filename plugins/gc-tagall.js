@@ -6,11 +6,11 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   }
   const pesan = args.join` `;
 const oi = `📩 𝑪𝑶𝑴𝑼𝑵𝑰𝑪𝑨𝑫𝑶: ${pesan}\n✅ 𝑰𝑵𝑻𝑬𝑮𝑹𝑨𝑵𝑻𝑬𝑺: _*${participants.length}*_`;
-  let teks = `┣ *𝑬𝑻𝑰𝑸𝑼𝑬𝑻𝑨 𝑮𝑬𝑵𝑬𝑹𝑨𝑳 𝑯𝒀𝑷𝑬𝑹𝑿𝑮𝑬𝑹𝑨𝑳* ┫\n\n ${oi}\n\n┏➤❗ 𝑹𝑬𝑽𝑰𝑽𝑨𝑵 𝑴𝑹𝑫 ❗\n`;
+  let teks = `┣ *𝑬𝑻𝑰𝑸𝑼𝑬𝑻𝑨 𝑮𝑬𝑵𝑬𝑹𝑨𝑳 𝑯𝒀𝑷𝑬𝑹𝑿𝑻𝑯𝑰𝑨𝑵𝒀* ┫\n\n ${oi}\n\n┏➤❗ 𝑹𝑬𝑽𝑰𝑽𝑨𝑵 𝑴𝑹𝑫 ❗\n`;
   for (const mem of participants) {
     teks += `┣🚻 @${mem.id.split('@')[0]}\n`;
   }
-  teks += `┗➤ 𝑯𝒀𝑷𝑬𝑹𝑿𝑮𝑬𝑹𝑨𝑳`;
+  teks += `┗➤ 𝑯𝒀𝑷𝑬𝑹𝑿𝑻𝑯𝑰𝑨𝑵𝒀`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
 handler.help = ['tagall <mesaje>', 'invocar <mesaje>'];
